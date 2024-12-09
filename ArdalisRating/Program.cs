@@ -9,6 +9,7 @@ namespace ArdalisRating
             Console.WriteLine("Ardalis Insurance Rating System Starting...");
 
             var engine = new RatingEngine();
+
             engine.Rate();
 
             if (engine.Rating > 0)
