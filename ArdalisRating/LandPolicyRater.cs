@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ArdalisRating
 {
-    public class LandPolicyRater : PolicyRaterBase
+    public class LandPolicyRater : Rater
     {
         public LandPolicyRater(RatingEngine engine, ConsoleLogger logger) : base(engine, logger)
         {
         }
-        public void Rate(Policy policy)
+        public override void Rate(Policy policy)
         {
             _logger.Log("Rating LAND policy...");
             _logger.Log("Validating policy.");

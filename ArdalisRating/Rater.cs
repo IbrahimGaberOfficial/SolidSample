@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ArdalisRating
 {
-    public class PolicyRaterBase
+    public class Rater
     {
         protected readonly RatingEngine _engine;
         protected readonly ConsoleLogger _logger;
 
-        public PolicyRaterBase(RatingEngine engine, ConsoleLogger logger)
+        public Rater(RatingEngine engine, ConsoleLogger logger)
         {
             this._engine = engine;
             this._logger = logger;
         }
+        public virtual void Rate(Policy policy) { }
     }
 }
