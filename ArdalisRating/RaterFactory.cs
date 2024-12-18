@@ -15,8 +15,9 @@ namespace ArdalisRating
                 var rater = (Rater)Activator.CreateInstance(Type.GetType($"ArdalisRating.{policy.Type}PolicyRater"), new object[] { engine, engine.Logger });
                 return rater;
             }
-            catch { 
-                return null;
+            catch {
+                return new UnknownPolicyRater(engine, engine.Logger);
+                
             }
 
             #region using switch

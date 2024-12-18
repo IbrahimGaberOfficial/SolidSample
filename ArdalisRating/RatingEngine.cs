@@ -27,7 +27,7 @@ namespace ArdalisRating
             var policy = PolicySerializer.GetPolicyFromJsonString(policyJson);
 
             var rater = new RaterFactory().Create(policy, this);
-            rater?.Rate(policy);
+            rater.Rate(policy);
             
             Logger.Log("Rating completed.");
         }
